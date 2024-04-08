@@ -1,0 +1,24 @@
+{
+  "name": "jestbug",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/jestbug/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "jestbug:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "jestbug:build:development"
+        },
+        "production": {
+          "buildTarget": "jestbug:build:production"
+        }
+      }
+    }
+  }
+}
